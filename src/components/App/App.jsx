@@ -26,7 +26,12 @@ function App() {
 				<main className='App-main'>
 					<Route path='/' exact>
 						{/* <h1>Feelings</h1> */}
-						<NumberView />
+						<NumberView
+							title='How are you feeling today?'
+							route='/understanding'
+							dispatchRoute='SET_FEELING'
+							storeName='feelingStore'
+						/>
 					</Route>
 					<Route path='/understanding' exact>
 						<h1>Understanding</h1>

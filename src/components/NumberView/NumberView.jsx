@@ -1,8 +1,14 @@
 import { TextField, Button } from '@mui/material';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom/';
+import { useSelector, useDispatch } from 'react-redux';
 
-function NumberView() {
-	const [value, setValue] = useState('');
+function NumberView({ title, route, dispatchRoute, storeName }) {
+	const storeValue = useSelector((store) => store[storeName]);
+	const dispatch = useDispatch();
+
+	const [value, setValue] = useState(storeValue);
+	const history = useHistory();
 
 	const handleChange = (e) => {
 		let num = e.target.value;
@@ -43,12 +49,20 @@ function NumberView() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log('submitting');
+		// console.log('submitting');
+		// console.log(value);
+
+		dispatch({
+			type: dispatchRoute,
+			payload: value,
+		});
+
+		history.push(route);
 	};
 
 	return (
 		<div className='view-wrapper'>
-			<h1>How are you feeling today?</h1>
+			<h1>{title}</h1>
 			<form onSubmit={handleSubmit}>
 				<TextField
 					variant='outlined'

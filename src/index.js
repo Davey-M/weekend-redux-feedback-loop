@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 
 // REDUCERS ------------------------------------------------------------
-const test = (state = 0, action) => {
+const test = (state = '', action) => {
 
     if (action.type === 'TEST') {
         return state + 1;
@@ -19,7 +19,7 @@ const test = (state = 0, action) => {
     return state;
 }
 
-const feelingStore = (state = 0, action) => {
+const feelingStore = (state = '', action) => {
 
     if (action.type === 'SET_FEELING') {
         return action.payload;
@@ -27,7 +27,7 @@ const feelingStore = (state = 0, action) => {
 
     return state
 }
-const understandingStore = (state = 0, action) => {
+const understandingStore = (state = '', action) => {
 
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
@@ -35,7 +35,7 @@ const understandingStore = (state = 0, action) => {
 
     return state
 }
-const supportStore = (state = 0, action) => {
+const supportStore = (state = '', action) => {
 
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
