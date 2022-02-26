@@ -20,3 +20,15 @@
 .text-view-wrapper form .input {
 	width: 100%;
 }
+
+.review-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 50%;
+}
+
+.review-items {
+	width: 100%;
+}
