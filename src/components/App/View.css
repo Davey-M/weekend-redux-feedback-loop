@@ -1,5 +1,4 @@
 .view-wrapper {
-	height: 30%;
 	display: flex;
 	justify-content: center;
 	gap: 20px;
@@ -11,4 +10,32 @@
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
+}
+
+.text-view-wrapper form {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.text-view-wrapper form .input {
+	width: 100%;
+}
+
+.review-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 50%;
+}
+
+.review-items {
+	width: 100%;
+}
+
+.review-button-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 }

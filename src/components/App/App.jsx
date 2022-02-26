@@ -9,7 +9,9 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 // component imports
 import Footer from '../Footer/Footer';
-import Feelings from '../Views/Feelings/Feelings';
+import NumberView from '../NumberView/NumberView';
+import TextView from '../TextView/TextView';
+import ReviewView from '../ReviewView/ReviewView';
 
 function App() {
 	return (
@@ -26,19 +28,43 @@ function App() {
 				<main className='App-main'>
 					<Route path='/' exact>
 						{/* <h1>Feelings</h1> */}
-						<Feelings />
+						<NumberView
+							title='How are you feeling today?'
+							route='/understanding'
+							dispatchRoute='SET_FEELING'
+							storeName='feelingStore'
+						/>
 					</Route>
 					<Route path='/understanding' exact>
-						<h1>Understanding</h1>
+						{/* <h1>Understanding</h1> */}
+						<NumberView
+							title='How well do you understand the content?'
+							route='/support'
+							dispatchRoute='SET_UNDERSTANDING'
+							storeName='understandingStore'
+						/>
 					</Route>
 					<Route path='/support' exact>
-						<h1>Support</h1>
+						{/* <h1>Support</h1> */}
+						<NumberView
+							title='How well are you being supported?'
+							route='/comments'
+							dispatchRoute='SET_SUPPORT'
+							storeName='supportStore'
+						/>
 					</Route>
 					<Route path='/comments' exact>
-						<h1>Comments</h1>
+						{/* <h1>Comments</h1> */}
+						<TextView
+							title='Any comments you want to share?'
+							route='/review'
+							dispatchRoute='SET_COMMENTS'
+							storeName='commentsStore'
+						/>
 					</Route>
 					<Route path='/review' exact>
-						<h1>Review</h1>
+						{/* <h1>Review</h1> */}
+						<ReviewView />
 					</Route>
 					<Route path='/success' exact>
 						<h1>Success</h1>
