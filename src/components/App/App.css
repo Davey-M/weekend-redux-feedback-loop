@@ -1,23 +1,29 @@
 .App {
 	text-align: center;
+	color: #333;
+	display: grid;
+	grid-template-rows: max-content 1fr max-content;
+	height: 100vh;
 }
 
 .App-header {
-	background-color: #033076;
-	min-height: 70px;
-	padding: 20px;
-	color: white;
-	margin-bottom: 20px;
+	padding: 10px;
 }
 
-.App-title {
-	font-size: 2em;
+.App-footer {
+	padding: 10px;
 }
 
-.App-intro {
-	font-size: large;
+.header-paper {
+	padding: 10px;
 }
 
-h4 {
-	font-style: italic;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
 }
