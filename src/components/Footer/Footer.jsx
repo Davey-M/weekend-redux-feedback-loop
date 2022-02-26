@@ -19,16 +19,16 @@ function Footer() {
 			case '/':
 				setStep(0);
 				break;
-			case '/':
+			case '/understanding':
 				setStep(1);
 				break;
-			case '/':
+			case '/support':
 				setStep(2);
 				break;
-			case '/':
+			case '/comments':
 				setStep(3);
 				break;
-			case '/':
+			case '/review':
 				setStep(4);
 				break;
 			default:
@@ -39,6 +39,7 @@ function Footer() {
 
 	useEffect(() => {
 		const unlisten = history.listen(updateFooter);
+		updateFooter();
 		return () => {
 			unlisten();
 		};
