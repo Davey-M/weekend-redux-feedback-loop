@@ -10,6 +10,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 // component imports
 import Footer from '../Footer/Footer';
 import NumberView from '../NumberView/NumberView';
+import TextView from '../TextView/TextView';
 
 function App() {
 	return (
@@ -52,7 +53,13 @@ function App() {
 						/>
 					</Route>
 					<Route path='/comments' exact>
-						<h1>Comments</h1>
+						{/* <h1>Comments</h1> */}
+						<TextView
+							title='Any comments you want to share?'
+							route='/review'
+							dispatchRoute='SET_COMMENTS'
+							storeName='commentsStore'
+						/>
 					</Route>
 					<Route path='/review' exact>
 						<h1>Review</h1>
