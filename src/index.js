@@ -18,9 +18,46 @@ const test = (state = 0, action) => {
     return state;
 }
 
+const feelingStore = (state = 0, action) => {
+
+    if (action.type === 'SET_FEELING') {
+        return action.payload;
+    }
+
+    return state
+}
+const understandingStore = (state = 0, action) => {
+
+    if (action.type === 'SET_UNDERSTANDING') {
+        return action.payload;
+    }
+
+    return state
+}
+const supportStore = (state = 0, action) => {
+
+    if (action.type === 'SET_SUPPORT') {
+        return action.payload;
+    }
+
+    return state
+}
+const commentsStore = (state = '', action) => {
+
+    if (action.type === 'SET_COMMENTS') {
+        return action.payload;
+    }
+
+    return state
+}
+
 const storeInstance = createStore(
     combineReducers({
         test,
+        feelingStore,
+        understandingStore,
+        supportStore,
+        commentsStore,
     }),
     applyMiddleware(logger)
 )
