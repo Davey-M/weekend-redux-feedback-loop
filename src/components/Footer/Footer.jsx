@@ -31,6 +31,9 @@ function Footer() {
 			case '/review':
 				setStep(4);
 				break;
+			case '/admin':
+				setStep(-1);
+				break;
 			default:
 				setStep(5);
 				break;

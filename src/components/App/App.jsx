@@ -28,14 +28,20 @@ function App() {
 					<Route path='/understanding' exact>
 						<h1>Understanding</h1>
 					</Route>
-					<Route path='support' exact>
+					<Route path='/support' exact>
 						<h1>Support</h1>
 					</Route>
-					<Route path='comments' exact>
+					<Route path='/comments' exact>
 						<h1>Comments</h1>
 					</Route>
-					<Route path='review' exact>
+					<Route path='/review' exact>
 						<h1>Review</h1>
+					</Route>
+					<Route path='/success' exact>
+						<h1>Success</h1>
+					</Route>
+					<Route path='/admin' exact>
+						<h1>Admin</h1>
 					</Route>
 				</main>
 				<Footer />
