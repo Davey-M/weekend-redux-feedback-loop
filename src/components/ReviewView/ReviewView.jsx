@@ -1,5 +1,13 @@
 import { useSelector } from 'react-redux';
-import { List, ListItem, ListItemText, Divider, Button } from '@mui/material';
+import {
+	List,
+	ListItem,
+	ListItemText,
+	Divider,
+	Button,
+	Backdrop,
+	CircularProgress,
+} from '@mui/material';
 import { useState } from 'react';
 
 import axios from 'axios';
@@ -11,9 +19,22 @@ function ReviewView() {
 	const store = useSelector((store) => store);
 
 	const [show, setShow] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const handleSubmit = () => {
-		console.log(store);
+		// console.log(store);
+		setLoading(true);
+
+		axios
+			.post('/feedback', store)
+			.then((response) => {
+				// do stuff
+				history.push('/success');
+			})
+			.catch((err) => {
+				console.error('Error in ReviewView', err);
+				setLoading(false);
+			});
 	};
 
 	// console.log(store);
@@ -61,6 +82,9 @@ function ReviewView() {
 					Submit
 				</Button>
 			</div>
+			<Backdrop open={loading}>
+				<CircularProgress color='inherit' />
+			</Backdrop>
 		</div>
 	);
 }
