@@ -44,9 +44,20 @@ function NumberView({ title, route, dispatchRoute, storeName }) {
 
 		const key = Number(e.key);
 
-		if (key < 6 && key > 0) {
-			setValue(key);
+		// stop the num from being greater than 5
+		if (key > 5) {
+			setValue(5);
+			return;
 		}
+
+		// stop the num from being less than 1
+		if (key < 1) {
+			setValue(1);
+			return;
+		}
+
+		// set the value of the input
+		setValue(key);
 	};
 
 	const handleSubmit = (e) => {
@@ -76,6 +87,7 @@ function NumberView({ title, route, dispatchRoute, storeName }) {
 					value={value}
 					onChange={handleChange}
 					onKeyPress={handleKeyPress}
+					size='small'
 				/>
 				<Button variant='contained' type='submit'>
 					Next

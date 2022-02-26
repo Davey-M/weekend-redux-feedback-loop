@@ -45,6 +45,7 @@ function TextView({ title, route, dispatchRoute, storeName }) {
 					onChange={handleChange}
 					multiline
 					rows={3}
+					size='small'
 				/>
 				<Button variant='contained' type='submit'>
 					Next
