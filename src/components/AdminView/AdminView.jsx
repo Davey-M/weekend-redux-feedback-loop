@@ -33,7 +33,7 @@ function AdminView() {
 		getFeedback();
 	}, []);
 
-	console.log(feedback);
+	// console.log(feedback);
 	return (
 		<div className='view-wrapper admin-wrapper'>
 			<Table>
