@@ -10,15 +10,6 @@ import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 
 // REDUCERS ------------------------------------------------------------
-const test = (state = '', action) => {
-
-    if (action.type === 'TEST') {
-        return state + 1;
-    }
-
-    return state;
-}
-
 const feelingStore = (state = '', action) => {
 
     if (action.type === 'SET_FEELING') {
@@ -55,7 +46,6 @@ const commentsStore = (state = '', action) => {
 
 const storeInstance = createStore(
     combineReducers({
-        test,
         feelingStore,
         understandingStore,
         supportStore,
