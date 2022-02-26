@@ -5,6 +5,11 @@
 	height: 100vh;
 }
 
+.dark-theme {
+	background-color: #232323;
+	color: white;
+}
+
 .App-header {
 	padding: 10px;
 }
