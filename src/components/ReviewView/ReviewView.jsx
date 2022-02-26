@@ -14,6 +14,15 @@ function ReviewView() {
 
 	const handleSubmit = () => {
 		console.log(store);
+
+		axios
+			.post('/feedback', store)
+			.then((response) => {
+				// do stuff
+			})
+			.catch((err) => {
+				console.error('Error in ReviewView', err);
+			});
 	};
 
 	// console.log(store);
