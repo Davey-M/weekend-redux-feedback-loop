@@ -1,4 +1,5 @@
 import './App.css';
+import './View.css';
 
 // mui imports
 import { Paper } from '@mui/material';
@@ -8,6 +9,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 // component imports
 import Footer from '../Footer/Footer';
+import Feelings from '../Views/Feelings/Feelings';
 
 function App() {
 	return (
@@ -23,7 +25,8 @@ function App() {
 				</header>
 				<main className='App-main'>
 					<Route path='/' exact>
-						<h1>Feelings</h1>
+						{/* <h1>Feelings</h1> */}
+						<Feelings />
 					</Route>
 					<Route path='/understanding' exact>
 						<h1>Understanding</h1>

@@ -1,0 +1,14 @@
+.view-wrapper {
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-direction: column;
+}
+
+.view-wrapper form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
