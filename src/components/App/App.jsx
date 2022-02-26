@@ -9,7 +9,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 
 // component imports
 import Footer from '../Footer/Footer';
-import Feelings from '../Views/Feelings/Feelings';
+import NumberView from '../NumberView/NumberView';
 
 function App() {
 	return (
@@ -26,7 +26,7 @@ function App() {
 				<main className='App-main'>
 					<Route path='/' exact>
 						{/* <h1>Feelings</h1> */}
-						<Feelings />
+						<NumberView />
 					</Route>
 					<Route path='/understanding' exact>
 						<h1>Understanding</h1>

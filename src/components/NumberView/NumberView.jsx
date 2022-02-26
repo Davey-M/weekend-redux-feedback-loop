@@ -1,7 +1,7 @@
 import { TextField, Button } from '@mui/material';
 import { useState } from 'react';
 
-function Feelings() {
+function NumberView() {
 	const [value, setValue] = useState('');
 
 	const handleChange = (e) => {
@@ -67,4 +67,4 @@ function Feelings() {
 	);
 }
 
-export default Feelings;
+export default NumberView;
