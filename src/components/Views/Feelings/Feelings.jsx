@@ -29,8 +29,21 @@ function Feelings() {
 		setValue(num);
 	};
 
+	const handleKeyPress = (e) => {
+		e.preventDefault();
+
+		// console.log(e.key);
+
+		const key = Number(e.key);
+
+		if (key < 6 && key > 0) {
+			setValue(key);
+		}
+	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		console.log('submitting');
 	};
 
 	return (
@@ -44,8 +57,11 @@ function Feelings() {
 					required
 					value={value}
 					onChange={handleChange}
+					onKeyPress={handleKeyPress}
 				/>
-				<Button variant='contained'>Next</Button>
+				<Button variant='contained' type='submit'>
+					Next
+				</Button>
 			</form>
 		</div>
 	);
