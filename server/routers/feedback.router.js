@@ -3,8 +3,24 @@ const router = express.Router();
 
 const pool = require('../modules/pool');
 
+router.get('/', (req, res) => {
+
+    const sqlText = `
+        SELECT * FROM "feedback" ORDER BY "id" ASC;
+    `
+
+    pool.query(sqlText)
+        .then(response => {
+            res.send(response.rows);
+        })
+        .catch(err => {
+            console.error('Error in get in router', err);
+            res.sendStatus(500);
+        })
+})
+
 router.post('/', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
 
     const sqlText = `
         INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")

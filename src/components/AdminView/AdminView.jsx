@@ -15,7 +15,9 @@ function AdminView() {
 			});
 	};
 
-	useEffect(() => {}, []);
+	useEffect(() => {
+		getFeedback();
+	}, []);
 
 	console.log(feedback);
 	return <div className='view-wrapper'></div>;
