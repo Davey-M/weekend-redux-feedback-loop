@@ -13,8 +13,9 @@ function Footer() {
 
 	const updateFooter = () => {
 		const thisRoute = history.location.pathname;
-		console.log(thisRoute);
+		// console.log(thisRoute); // test
 
+		// set the stepper to the current route
 		switch (thisRoute) {
 			case '/':
 				setStep(0);
@@ -41,8 +42,13 @@ function Footer() {
 	};
 
 	useEffect(() => {
+		// set the history listener so update footer is called when the route changes
 		const unlisten = history.listen(updateFooter);
+
+		// call update footer once at the beginning in case we start on a different route than the home route
 		updateFooter();
+
+		// the unlisten function will be called when the component unmounts
 		return () => {
 			unlisten();
 		};
