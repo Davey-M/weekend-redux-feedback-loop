@@ -18,12 +18,12 @@ function App() {
 		<Router>
 			<div className='App'>
 				<header className='App-header'>
-					{/* <Paper> */}
-					<div className='header-paper'>
-						<h1>Feedback!</h1>
-						<p>Don't forget it!</p>
-					</div>
-					{/* </Paper> */}
+					<Paper>
+						<div className='header-paper'>
+							<h1>Feedback!</h1>
+							<p>Don't forget it!</p>
+						</div>
+					</Paper>
 				</header>
 				<main>
 					<Route path='/' exact>
@@ -34,7 +34,6 @@ function App() {
 					</Route>
 				</main>
 				<footer className='App-footer'>
-					{/* <Paper className='header-paper'> */}
 					<div className='stepper-wrapper'>
 						<Stepper activeStep={0}>
 							<Step>
@@ -54,7 +53,6 @@ function App() {
 							</Step>
 						</Stepper>
 					</div>
-					{/* </Paper> */}
 				</footer>
 			</div>
 		</Router>
