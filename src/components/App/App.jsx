@@ -34,7 +34,13 @@ function App() {
 						/>
 					</Route>
 					<Route path='/understanding' exact>
-						<h1>Understanding</h1>
+						{/* <h1>Understanding</h1> */}
+						<NumberView
+							title='How well do you understand todays material?'
+							route='/support'
+							dispatchRoute='SET_UNDERSTANDING'
+							storeName='understandingStore'
+						/>
 					</Route>
 					<Route path='/support' exact>
 						<h1>Support</h1>

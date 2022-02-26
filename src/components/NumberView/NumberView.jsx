@@ -4,9 +4,11 @@ import { useHistory } from 'react-router-dom/';
 import { useSelector, useDispatch } from 'react-redux';
 
 function NumberView({ title, route, dispatchRoute, storeName }) {
+	// get store value from the reducer
 	const storeValue = useSelector((store) => store[storeName]);
 	const dispatch = useDispatch();
 
+	// set the input value to the current store value
 	const [value, setValue] = useState(storeValue);
 	const history = useHistory();
 
@@ -52,11 +54,13 @@ function NumberView({ title, route, dispatchRoute, storeName }) {
 		// console.log('submitting');
 		// console.log(value);
 
+		// set the reducer value
 		dispatch({
 			type: dispatchRoute,
 			payload: value,
 		});
 
+		// move to the next route
 		history.push(route);
 	};
 
