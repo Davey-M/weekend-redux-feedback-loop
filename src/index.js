@@ -9,6 +9,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 
+// REDUCERS ------------------------------------------------------------
 const test = (state = 0, action) => {
 
     if (action.type === 'TEST') {
@@ -50,6 +51,7 @@ const commentsStore = (state = '', action) => {
 
     return state
 }
+// REDUCERS ------------------------------------------------------------
 
 const storeInstance = createStore(
     combineReducers({
