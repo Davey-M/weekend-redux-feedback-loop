@@ -43,11 +43,11 @@ function App() {
 							<div className='header-paper'>
 								<h1>Feedback!</h1>
 								<p>Don't forget it!</p>
-								<FormControlLabel
-									onClick={setTheme}
-									control={<Switch />}
-									label='Dark Mode'
-								/>
+								<div className='control-container'>
+									{/* <FormControlLabel control={<Switch />} label='Dark Mode' /> */}
+									<Switch onClick={setTheme} />
+									<span>Dark Mode</span>
+								</div>
 							</div>
 						</Paper>
 					</header>
