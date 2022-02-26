@@ -13,12 +13,13 @@ function ReviewView() {
 	const [show, setShow] = useState(false);
 
 	const handleSubmit = () => {
-		console.log(store);
+		// console.log(store);
 
 		axios
 			.post('/feedback', store)
 			.then((response) => {
 				// do stuff
+				history.push('/success');
 			})
 			.catch((err) => {
 				console.error('Error in ReviewView', err);
