@@ -36,14 +36,20 @@ function App() {
 					<Route path='/understanding' exact>
 						{/* <h1>Understanding</h1> */}
 						<NumberView
-							title='How well do you understand todays material?'
+							title='How well do you understand the content?'
 							route='/support'
 							dispatchRoute='SET_UNDERSTANDING'
 							storeName='understandingStore'
 						/>
 					</Route>
 					<Route path='/support' exact>
-						<h1>Support</h1>
+						{/* <h1>Support</h1> */}
+						<NumberView
+							title='How well are you being supported?'
+							route='/comments'
+							dispatchRoute='SET_SUPPORT'
+							storeName='supportStore'
+						/>
 					</Route>
 					<Route path='/comments' exact>
 						<h1>Comments</h1>
