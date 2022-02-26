@@ -27,10 +27,19 @@ function App() {
 				</header>
 				<main>
 					<Route path='/' exact>
-						Hi
+						<h1>Feelings</h1>
 					</Route>
-					<Route path='/hello' exact>
-						Hello
+					<Route path='/understanding' exact>
+						<h1>Understanding</h1>
+					</Route>
+					<Route path='support' exact>
+						<h1>Support</h1>
+					</Route>
+					<Route path='comments' exact>
+						<h1>Comments</h1>
+					</Route>
+					<Route path='review' exact>
+						<h1>Review</h1>
 					</Route>
 				</main>
 				<footer className='App-footer'>
