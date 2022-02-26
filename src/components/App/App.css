@@ -11,7 +11,7 @@
 }
 
 .App-footer {
-	padding: 20px;
+	padding: 40px 20px;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -21,6 +21,12 @@
 .stepper-wrapper {
 	width: 100%;
 	max-width: 800px;
+}
+
+.App-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .header-paper {

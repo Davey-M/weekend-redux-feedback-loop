@@ -1,17 +1,13 @@
-import React from 'react';
-import axios from 'axios';
 import './App.css';
 
 // mui imports
-import { Paper, Stepper, Step, StepLabel } from '@mui/material';
+import { Paper } from '@mui/material';
 
 // router imports
-import {
-	HashRouter as Router,
-	Route,
-	Switch,
-	useHistory,
-} from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
+
+// component imports
+import Footer from '../Footer/Footer';
 
 function App() {
 	return (
@@ -25,7 +21,7 @@ function App() {
 						</div>
 					</Paper>
 				</header>
-				<main>
+				<main className='App-main'>
 					<Route path='/' exact>
 						<h1>Feelings</h1>
 					</Route>
@@ -42,27 +38,7 @@ function App() {
 						<h1>Review</h1>
 					</Route>
 				</main>
-				<footer className='App-footer'>
-					<div className='stepper-wrapper'>
-						<Stepper activeStep={0}>
-							<Step>
-								<StepLabel>Feelings</StepLabel>
-							</Step>
-							<Step>
-								<StepLabel>Understanding</StepLabel>
-							</Step>
-							<Step>
-								<StepLabel>Support</StepLabel>
-							</Step>
-							<Step>
-								<StepLabel>Comments</StepLabel>
-							</Step>
-							<Step>
-								<StepLabel>Review</StepLabel>
-							</Step>
-						</Stepper>
-					</div>
-				</footer>
+				<Footer />
 			</div>
 		</Router>
 	);
