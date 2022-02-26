@@ -6,19 +6,26 @@ import {
 	TableBody,
 	TableRow,
 	TableCell,
+	Backdrop,
+	CircularProgress,
 } from '@mui/material';
 
 function AdminView() {
 	const [feedback, setFeedback] = useState([]);
+	const [loading, setLoading] = useState(true);
 
+	// get feedback list from the server
 	const getFeedback = () => {
 		axios
 			.get('/feedback')
 			.then((response) => {
+				// set the page state to the data from the server
 				setFeedback(response.data);
+				setLoading(false);
 			})
 			.catch((err) => {
 				console.error('Error getting feedback in AdminView', err);
+				setLoading(false);
 			});
 	};
 
@@ -63,6 +70,9 @@ function AdminView() {
 					})}
 				</TableBody>
 			</Table>
+			<Backdrop open={loading}>
+				<CircularProgress color='inherit' />
+			</Backdrop>
 		</div>
 	);
 }
