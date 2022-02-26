@@ -11,3 +11,12 @@
 	align-items: center;
 	gap: 20px;
 }
+
+.text-view-wrapper form {
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.text-view-wrapper form .input {
+	width: 100%;
+}

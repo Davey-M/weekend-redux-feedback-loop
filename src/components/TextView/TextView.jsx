@@ -32,16 +32,19 @@ function TextView({ title, route, dispatchRoute, storeName }) {
 	};
 
 	return (
-		<div className='view-wrapper'>
+		<div className='view-wrapper text-view-wrapper'>
 			<h1>{title}</h1>
 			<form onSubmit={handleSubmit}>
 				<TextField
+					className='input'
 					variant='outlined'
 					label='Share your thoughts'
 					type='text'
 					required
 					value={value}
 					onChange={handleChange}
+					multiline
+					rows={3}
 				/>
 				<Button variant='contained' type='submit'>
 					Next
