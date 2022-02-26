@@ -39,3 +39,8 @@
 	display: flex;
 	justify-content: flex-end;
 }
+
+.admin-wrapper {
+	width: 80%;
+	max-width: 800px;
+}

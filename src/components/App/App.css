@@ -3,6 +3,12 @@
 	display: grid;
 	grid-template-rows: max-content 1fr max-content;
 	height: 100vh;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.dark-theme {
+	background-color: #232323;
+	color: white;
 }
 
 .App-header {
@@ -40,4 +46,13 @@ h5,
 h6,
 p {
 	margin: 0;
+}
+
+.control-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
