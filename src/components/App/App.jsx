@@ -11,6 +11,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import NumberView from '../NumberView/NumberView';
 import TextView from '../TextView/TextView';
+import ReviewView from '../ReviewView/ReviewView';
 
 function App() {
 	return (
@@ -62,7 +63,8 @@ function App() {
 						/>
 					</Route>
 					<Route path='/review' exact>
-						<h1>Review</h1>
+						{/* <h1>Review</h1> */}
+						<ReviewView />
 					</Route>
 					<Route path='/success' exact>
 						<h1>Success</h1>
