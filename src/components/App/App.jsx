@@ -3,7 +3,13 @@ import './App.css';
 import './View.css';
 
 // mui imports
-import { Paper, createTheme, ThemeProvider } from '@mui/material';
+import {
+	Paper,
+	createTheme,
+	ThemeProvider,
+	Switch,
+	FormControlLabel,
+} from '@mui/material';
 
 // router imports
 import { HashRouter as Router, Route } from 'react-router-dom';
@@ -37,6 +43,11 @@ function App() {
 							<div className='header-paper'>
 								<h1>Feedback!</h1>
 								<p>Don't forget it!</p>
+								<FormControlLabel
+									onClick={setTheme}
+									control={<Switch />}
+									label='Dark Mode'
+								/>
 							</div>
 						</Paper>
 					</header>

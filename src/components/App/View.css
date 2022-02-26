@@ -42,4 +42,5 @@
 
 .admin-wrapper {
 	width: 80%;
+	max-width: 800px;
 }
