@@ -19,6 +19,7 @@ function ReviewView() {
 	// console.log(store);
 	return (
 		<div className='review-wrapper'>
+			<h1>Review</h1>
 			<div className='review-items'>
 				<List>
 					<ListItem>
@@ -51,9 +52,15 @@ function ReviewView() {
 					<Divider />
 				</List>
 			</div>
-			<Button variant='contained' onClick={handleSubmit}>
-				Submit
-			</Button>
+			<div className='review-button-container'>
+				<Button
+					variant='contained'
+					onClick={handleSubmit}
+					className='review-button'
+				>
+					Submit
+				</Button>
+			</div>
 		</div>
 	);
 }

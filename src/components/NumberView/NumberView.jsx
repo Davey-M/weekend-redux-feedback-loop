@@ -44,6 +44,10 @@ function NumberView({ title, route, dispatchRoute, storeName }) {
 
 		const key = Number(e.key);
 
+		if (isNaN(key)) {
+			return;
+		}
+
 		// stop the num from being greater than 5
 		if (key > 5) {
 			setValue(5);

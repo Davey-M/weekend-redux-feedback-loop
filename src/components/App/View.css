@@ -23,7 +23,8 @@
 
 .review-wrapper {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: 20px;
 	width: 50%;
@@ -31,4 +32,10 @@
 
 .review-items {
 	width: 100%;
+}
+
+.review-button-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 }
