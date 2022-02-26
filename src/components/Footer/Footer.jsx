@@ -32,11 +32,11 @@ function Footer() {
 			case '/review':
 				setStep(4);
 				break;
-			case '/admin':
-				setStep(-1);
+			case '/success':
+				setStep(5);
 				break;
 			default:
-				setStep(5);
+				setStep(-1);
 				break;
 		}
 	};
