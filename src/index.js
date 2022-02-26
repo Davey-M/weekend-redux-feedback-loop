@@ -10,6 +10,11 @@ import { Provider } from 'react-redux';
 import { logger } from 'redux-logger';
 
 const test = (state = 0, action) => {
+
+    if (action.type === 'TEST') {
+        return state + 1;
+    }
+
     return state;
 }
 
