@@ -12,6 +12,7 @@ import Footer from '../Footer/Footer';
 import NumberView from '../NumberView/NumberView';
 import TextView from '../TextView/TextView';
 import ReviewView from '../ReviewView/ReviewView';
+import AdminView from '../AdminView/AdminView';
 
 function App() {
 	return (
@@ -70,7 +71,8 @@ function App() {
 						<h1>Success</h1>
 					</Route>
 					<Route path='/admin' exact>
-						<h1>Admin</h1>
+						{/* <h1>Admin</h1> */}
+						<AdminView />
 					</Route>
 				</main>
 				<Footer />
