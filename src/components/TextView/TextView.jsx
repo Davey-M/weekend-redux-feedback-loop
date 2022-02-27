@@ -40,7 +40,6 @@ function TextView({ title, route, dispatchRoute, storeName }) {
 					variant='outlined'
 					label='Share your thoughts'
 					type='text'
-					required
 					value={value}
 					onChange={handleChange}
 					multiline
