@@ -46,6 +46,9 @@ function TextView({ title, route, dispatchRoute, storeName }) {
 					rows={3}
 					size='small'
 				/>
+				<Button variant='outlined' onClick={() => history.push('/support')}>
+					Previous
+				</Button>
 				<Button variant='contained' type='submit'>
 					Next
 				</Button>

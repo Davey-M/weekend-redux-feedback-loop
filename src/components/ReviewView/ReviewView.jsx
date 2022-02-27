@@ -74,6 +74,9 @@ function ReviewView() {
 				</List>
 			</div>
 			<div className='review-button-container'>
+				<Button variant='outlined' onClick={() => history.push('/comments')}>
+					Go Back
+				</Button>
 				<Button
 					variant='contained'
 					onClick={handleSubmit}

@@ -69,6 +69,7 @@ function App() {
 								route='/support'
 								dispatchRoute='SET_UNDERSTANDING'
 								storeName='understandingStore'
+								prevRoute={'/'}
 							/>
 						</Route>
 						<Route path='/support' exact>
@@ -78,6 +79,7 @@ function App() {
 								route='/comments'
 								dispatchRoute='SET_SUPPORT'
 								storeName='supportStore'
+								prevRoute={'/understanding'}
 							/>
 						</Route>
 						<Route path='/comments' exact>

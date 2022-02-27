@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useHistory } from 'react-router-dom/';
 import { useSelector, useDispatch } from 'react-redux';
 
-function NumberView({ title, route, dispatchRoute, storeName }) {
+function NumberView({ title, route, dispatchRoute, storeName, prevRoute }) {
 	// get store value from the reducer
 	const storeValue = useSelector((store) => store[storeName]);
 	const dispatch = useDispatch();
@@ -93,6 +93,11 @@ function NumberView({ title, route, dispatchRoute, storeName }) {
 					onKeyPress={handleKeyPress}
 					size='small'
 				/>
+				{prevRoute && (
+					<Button variant='outlined' onClick={() => history.push(prevRoute)}>
+						Previous
+					</Button>
+				)}
 				<Button variant='contained' type='submit'>
 					Next
 				</Button>
