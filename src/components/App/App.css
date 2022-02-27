@@ -1,23 +1,58 @@
 .App {
-  text-align: center;
+	text-align: center;
+	display: grid;
+	grid-template-rows: max-content 1fr max-content;
+	min-height: 100vh;
+	transition: background-color 0.2s, color 0.2s;
+}
+
+.dark-theme {
+	background-color: #232323;
+	color: white;
 }
 
 .App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
+	padding: 10px;
 }
 
-.App-title {
-  font-size: 2em;
+.App-footer {
+	padding: 40px 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.App-intro {
-  font-size: large;
+.stepper-wrapper {
+	width: 100%;
+	max-width: 800px;
 }
 
-h4 {
-  font-style: italic;
+.App-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-paper {
+	padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+.control-container {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
