@@ -1,9 +1,21 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Redux FeedBack Form
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This project is a feedback form that can be used for any organization looking to gather input from their users. It was created in a weekend for the Full Stack Development course at Prime Digital Academy.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Technologies
+
+- React
+- Redux
+- Express
+- Node.js
+- Javascript
+- HTML
+- CSS
+- Postgresql
+- Material UI
+
+## Support
+
+If you have any questions please email me at [davey.meuer@gmail.com](mailto:davey.meuer@gmail.com)
