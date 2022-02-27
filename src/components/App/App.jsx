@@ -20,6 +20,7 @@ import NumberView from '../NumberView/NumberView';
 import TextView from '../TextView/TextView';
 import ReviewView from '../ReviewView/ReviewView';
 import AdminView from '../AdminView/AdminView';
+import SuccessView from '../SuccessView/SuccessView';
 
 function App() {
 	const [theme, setDarkTheme] = useState(false);
@@ -93,7 +94,8 @@ function App() {
 							<ReviewView />
 						</Route>
 						<Route path='/success' exact>
-							<h1>Success</h1>
+							{/* <h1>Success</h1> */}
+							<SuccessView />
 						</Route>
 						<Route path='/admin' exact>
 							{/* <h1>Admin</h1> */}
