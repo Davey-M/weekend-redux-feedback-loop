@@ -50,8 +50,9 @@ const storeInstance = createStore(
         understandingStore,
         supportStore,
         commentsStore,
-    }),
-    applyMiddleware(logger)
+    })
+    // ,
+    // applyMiddleware(logger)
 )
 
 ReactDOM.render(
