@@ -4,15 +4,15 @@ import { useEffect, useState } from 'react';
 import { Stepper, Step, StepLabel } from '@mui/material';
 
 // router imports
-import { useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
-	const history = useHistory();
+	const location = useLocation();
 
 	const [step, setStep] = useState(0);
 
 	const updateFooter = () => {
-		const thisRoute = history.location.pathname;
+		const thisRoute = location.pathname;
 		// console.log(thisRoute); // test
 
 		// set the stepper to the current route
@@ -42,17 +42,8 @@ function Footer() {
 	};
 
 	useEffect(() => {
-		// set the history listener so update footer is called when the route changes
-		const unlisten = history.listen(updateFooter);
-
-		// call update footer once at the beginning in case we start on a different route than the home route
 		updateFooter();
-
-		// the unlisten function will be called when the component unmounts
-		return () => {
-			unlisten();
-		};
-	}, []);
+	}, [location]);
 
 	return (
 		<footer className='App-footer'>
