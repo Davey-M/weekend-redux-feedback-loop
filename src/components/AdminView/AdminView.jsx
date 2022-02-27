@@ -8,11 +8,26 @@ import {
 	TableCell,
 	Backdrop,
 	CircularProgress,
+	List,
+	ListItem,
+	ListItemText,
+	Divider,
+	Paper,
 } from '@mui/material';
 
 function AdminView() {
 	const [feedback, setFeedback] = useState([]);
 	const [loading, setLoading] = useState(true);
+
+	// show data when a table row is clicked
+	const [showData, setShowData] = useState(false);
+	const [currentData, setCurrentData] = useState({
+		id: '',
+		feeling: '',
+		understanding: '',
+		support: '',
+		comments: '',
+	});
 
 	// get feedback list from the server
 	const getFeedback = () => {
@@ -54,10 +69,16 @@ function AdminView() {
 					</TableRow>
 				</TableHead>
 				<TableBody>
-					{feedback.map((item) => {
+					{feedback.map((item, index) => {
 						const { id, feeling, understanding, support, comments } = item;
+
+						const handleRowClick = () => {
+							setCurrentData(feedback[index]);
+							setShowData(true);
+						};
+
 						return (
-							<TableRow key={id}>
+							<TableRow key={id} hover onClick={handleRowClick}>
 								<TableCell>{feeling}</TableCell>
 								<TableCell>{understanding}</TableCell>
 								<TableCell>{support}</TableCell>
@@ -72,6 +93,35 @@ function AdminView() {
 			</Table>
 			<Backdrop open={loading}>
 				<CircularProgress color='inherit' />
+			</Backdrop>
+			<Backdrop open={showData} onClick={() => setShowData(false)}>
+				<Paper className='data-card'>
+					<List>
+						<ListItem>
+							<ListItemText>
+								<b>Feeling:</b> {currentData.feeling}
+							</ListItemText>
+						</ListItem>
+						<Divider />
+						<ListItem>
+							<ListItemText>
+								<b>Understanding:</b> {currentData.understanding}
+							</ListItemText>
+						</ListItem>
+						<Divider />
+						<ListItem>
+							<ListItemText>
+								<b>Support:</b> {currentData.support}
+							</ListItemText>
+						</ListItem>
+						<Divider />
+						<ListItem>
+							<ListItemText>
+								<b>Comments:</b> {currentData.comments}
+							</ListItemText>
+						</ListItem>
+					</List>
+				</Paper>
 			</Backdrop>
 		</div>
 	);
